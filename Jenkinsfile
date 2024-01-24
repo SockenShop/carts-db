@@ -30,7 +30,7 @@ agent any
          steps {
             sh 'docker image tag $DOCKER_ID/$DOCKER_IMAGE_CARTS_DB:$DOCKER_TAG $DOCKER_ID/$DOCKER_IMAGE_CARTS_DB:latest'
             sh 'docker login -u $DOCKER_ID -p $DOCKER_PASS'
-            sh 'docker push $DOCKER_ID/$DOCKER_IMAGE_CARTS_DB:$DOCKER_TAG && docker push $DOCKER_ID/$DOCKER_IMAGE_ORDERS_DB:latest'
+            sh 'docker push $DOCKER_ID/$DOCKER_IMAGE_CARTS_DB:$DOCKER_TAG && docker push $DOCKER_ID/$DOCKER_IMAGE_CARTS_DB:latest'
             }
         }
         stage('Deploy EKS') {
